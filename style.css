@@ -12,11 +12,16 @@ body{
 }
 
 .logo{
-    min-width: 40%;
+    width: 40%;
     text-align: center;
     margin-top: 3%;
     margin-left: 8%;
 } 
+@media screen and (max-width: 600px) {
+    .logo{
+        width: 100%;
+    }
+}
 .titulo {
     font-size: 3em;
     line-height: 1.5; 
