@@ -1,5 +1,6 @@
 :root{
     --fundo: black;
+    --section-conteudo: rgb(80, 80, 80);
 }
 *{
     padding: 0%;
@@ -12,8 +13,9 @@ body{
 }
 
 .logo{
-    width: 40%;
+    width: 50%;
     text-align: center;
+    top: 0%;
     margin-top: 3%;
     margin-left: 8%;
 } 
@@ -38,7 +40,7 @@ body{
     }
 }
 .cabecalho{
-    max-height:30.5vh ;
+    max-height:auto;
     min-height: 30.5h;
     display: grid;
     justify-content: center;
@@ -47,16 +49,16 @@ body{
     text-align: center;
     grid-template-columns:20% 50% 20%;
     margin-bottom: 3%;
-    border-bottom:2px solid rgb(80, 80, 80) ;
+    border-bottom:2px solid var(--section-conteudo) ;
 }
 
     .apresentacao_section{
-        height: 600vh;
+        height: auto;
         text-align: center;
         
     }
     .apresentacao{
-        margin-top: 4%;
+        margin: 4% 0;
         text-align: center;
         display: grid;
         justify-content: center;
@@ -68,6 +70,10 @@ body{
         .apresentacao{
             grid-template-columns:30% 30% 15% 30%;
         }
+        .apresentacao_section{
+            height: 60vh;
+            
+        }
         }
 
     .titulo_apresentacao{
@@ -78,53 +84,159 @@ body{
     .caixa_apresentacao{
         display: block;
         font-weight: 200;
-        background-color: rgb(70, 69, 71);
+        background-color: var(--section-conteudo);
         text-align: left;
         justify-self:center ;
         padding: 1% 1% 1% 1% ;
         align-items: center;
         border:1%;border: solid rgb(255, 248, 248);
-        height: 93%;
-        width: 100%;
+        min-height: 93%;
+        min-width: 100%;
+        border-radius: 10px;
     }
 
-    .caixa_apresentacao b{
+    section b{
         color: orange;
     }
 
     .imagem{
+        margin-left: 3%;
         height: 94%;
         width: 90%;
+        min-height: 94%;
+        min-width: 90%;
+        max-height: 94%;
+        max-width: 90%;
+        background-color: rgb(2, 46, 75);
     }
-
    
     .caixa_apresentacao nav{ 
         text-align: right;
      }
      
      a{
-        padding: 0 5px 0 10px;
+        margin: 2px;
+        padding: 0 2px 0 9px;
         color: rgb(255, 255, 255);
         text-decoration:none;
+        
+     }
+     a:hover{
+        color: rgb(0, 255, 13); 
+        text-shadow: #4e08ff 0 0 10px;
+        text-decoration: line-through;
      }
     .links{
-        top:2%;
+        top:1%;
         position: fixed;
         justify-content: flex-end;
         display: grid;
-        text-align: left;
-        border: 2px solid #fff;
+        text-align: left; 
+        border: 2px solid rgb(255, 255, 255);
         border-radius: 10px;
+        font-size: 7px;
         background-color: rgb(57, 57, 57);
     }
     @media only screen and (min-width: 720px) and (max-width: 1280px){
         .links{
-            top:45%;
+            top:1.5%;
+            font-size: 10px;
         }
         }
     .links_fixo{
-      
         display: flex;
         align-items: center;
         justify-content: flex-end;
+    }
+
+
+    .projetos{
+        flex-wrap: wrap;
+        text-align: center;
+        border-top:1%; border-top:solid #fff ;
+        height: auto;
+        background-color: var(--fundo);
+    }
+    .titulo_projetos{
+        font-size: 30px;
+        font-family: cursive;
+        text-align: center; 
+        margin-bottom: 3%;
+        margin-top: 1%;
+    }
+    .itens_projeto{
+        display: flex;
+        margin: auto;
+        grid-template-columns: 23% 23% 23% 23%;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+    }
+    .itens{
+        flex-grow: 1;
+        flex-basis: 200;
+        display: block;
+        margin-top: 5%;
+    }
+    .nome_projeto{
+
+        margin-top: -1%;
+        margin-bottom: 2%;
+        color: rgb(255, 255, 255);
+    }
+     .itens_foto{
+        border-radius: 10px;
+        border: 2px solid rgb(255, 255, 255);
+        width: 70%;
+        margin-bottom: 5%;
+    }
+    .itens_foto:hover{
+        transform: translatex(30px) scale(1.5);
+    }
+    
+    
+
+    .quem_somos{
+        height: 60vh;
+        text-align: center;
+        border-top:1%;border-top: solid #fff ;
+        background-color:var(--fundo);
+    }
+
+    .container_quemsomos{
+        margin: 7%;
+        display: grid;
+        justify-content: center; 
+        align-items: center;  
+        grid-template-columns: 50% 40%;
+    }
+    .texto_quemsomos{
+        line-clamp: 30;
+    }
+    .img_quemsomos{
+        width: 40%;
+        margin: 3%;
+        border-radius: 10px;
+        border: 1%;border: solid #ffffff;
+        padding: 10px 10px;
+        background-color: rgb(24, 128, 128);
+    }
+
+    .grupo{
+        background-color: rgb(37, 37, 37);
+        border: 1%;border:  solid rgb(243, 243, 255);
+        margin:  0 5%;
+        border-radius: 10px;
+        display:inline-flex;
+        align-items: center;
+        justify-content:center ;
+    }
+    .integrantes{
+        border-radius: 50%;
+        width: 40%;
+        margin-top: 4%;
+        border:1px solid #fff;
+    }
+    .nome_integrantes{
+        color: blue;
     }
